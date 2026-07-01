@@ -39,6 +39,9 @@ const WEATHER_CODES = {
   99: { label: "Tormenta severa con granizo", icon: "⛈️" },
 };
 
+const DEFAULT_COORDS = { latitude: 40.4168, longitude: -3.7038 }; // Madrid, por defecto
+const GEOLOCATION_TIMEOUT_MS = 10000;
+
 let lastCoords = null;
 
 function pad(value) {
@@ -149,10 +152,10 @@ function requestLocationAndLoadWeather() {
     },
     () => {
       statusEl.textContent = "Permiso de ubicación denegado. Usando ubicación por defecto.";
-      lastCoords = { latitude: 40.4168, longitude: -3.7038 }; // Madrid, por defecto
+      lastCoords = DEFAULT_COORDS;
       loadWeather(lastCoords.latitude, lastCoords.longitude);
     },
-    { timeout: 10000 }
+    { timeout: GEOLOCATION_TIMEOUT_MS }
   );
 }
 

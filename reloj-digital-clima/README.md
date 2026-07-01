@@ -23,3 +23,12 @@ Aplicación web sencilla (HTML, CSS y JavaScript puro) que muestra:
 - `navigator.geolocation` del navegador para obtener las coordenadas del usuario.
 
 No requiere instalación ni dependencias: solo un navegador con conexión a internet.
+
+## Utilidad de promedio
+
+El archivo `average.js` incluye la función `calcularPromedio(numeros)`:
+
+- Recibe un arreglo de números (enteros y/o decimales).
+- Retorna la media aritmética.
+- Lanza un error si la lista está vacía.
+- Lanza un error de tipo si el argumento no es un arreglo de números finitos.

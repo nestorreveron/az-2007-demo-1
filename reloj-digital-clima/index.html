@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reloj Digital con Clima</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="clock">
+      <div id="time" class="time">--:--:--</div>
+      <div id="date" class="date">-</div>
+    </header>
+
+    <section class="weather">
+      <div id="weather-status" class="weather-status">Obteniendo ubicación…</div>
+
+      <div id="weather-info" class="weather-info hidden">
+        <div class="weather-main">
+          <span id="weather-icon" class="weather-icon">🌡️</span>
+          <span id="temperature" class="temperature">--°C</span>
+        </div>
+        <div class="weather-details">
+          <div class="weather-detail">
+            <span class="label">Sensación</span>
+            <span id="feels-like" class="value">--°C</span>
+          </div>
+          <div class="weather-detail">
+            <span class="label">Humedad</span>
+            <span id="humidity" class="value">--%</span>
+          </div>
+          <div class="weather-detail">
+            <span class="label">Viento</span>
+            <span id="wind" class="value">-- km/h</span>
+          </div>
+        </div>
+        <div id="location" class="location">--</div>
+      </div>
+
+      <div class="controls">
+        <label class="option">
+          <span>Unidad</span>
+          <select id="unit-select">
+            <option value="celsius">°C</option>
+            <option value="fahrenheit">°F</option>
+          </select>
+        </label>
+        <label class="option">
+          <span>Formato</span>
+          <select id="format-select">
+            <option value="24">24h</option>
+            <option value="12">12h</option>
+          </select>
+        </label>
+        <button id="refresh-btn" type="button">Actualizar clima</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
